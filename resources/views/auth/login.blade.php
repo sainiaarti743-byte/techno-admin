@@ -30,8 +30,8 @@
 
 <div class="card login-card p-4">
     <div class="card-body">
-        <h3 class="text-center mb-4 fw-bold text-dark">School Admin Panel</h3>
-        <p class="text-muted text-center small">Apne account me login karein</p>
+        <h3 class="text-center mb-4 fw-bold text-dark"> Techno School</h3>
+     <p class="text-muted text-center small">Log in to your account</p>
 
         @if ($errors->any())
             <div class="alert alert-danger py-2 small">
@@ -58,7 +58,7 @@
 
             <div class="mb-3 form-check">
                 <input type="checkbox" name="remember" class="form-check-input" id="remember">
-                <label class="form-check-label small text-muted" strip-tags for="remember">Mujhe yaad rakhein</label>
+                <label class="form-check-label small text-muted" strip-tags for="remember">Remember</label>
             </div>
 
             <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">Login</button>
