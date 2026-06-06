@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/techno/public_html/admin
+    - /bin/cp -R * $DEPLOYPATH
