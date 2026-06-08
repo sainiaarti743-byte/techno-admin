@@ -1,4 +1,10 @@
+---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/techno/public_html/admin
-    - /bin/cp -R * $DEPLOYPATH
+    - export DEPLOYPATH=/home/techno/public_html/admin
+    - cd $DEPLOYPATH
+    - php artisan storage:link
+    - php artisan config:clear
+    - php artisan cache:clear
+    - php artisan view:clear
+    - php artisan migrate --force
