@@ -15,6 +15,7 @@ use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PopupBannerController;
 use App\Http\Controllers\AuthController; 
+use App\Http\Controllers\PasswordController;
 
 
 Route::get('/', function () {
@@ -72,8 +73,9 @@ Route::middleware(['auth'])->prefix('admin')->as('admin.')->group(function () {
     
 
     // Profile & Security Management
-    Route::get('/change-password', [ProfileController::class, 'editPassword'])->name('password.edit');
-    Route::post('/change-password', [ProfileController::class, 'updatePassword'])->name('password.update');
+   
+   Route::get('/password/edit', [PasswordController::class, 'edit'])->name('password.edit');
+    Route::put('/password/update', [PasswordController::class, 'update'])->name('password.update');
 
     // Core Settings
     Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
