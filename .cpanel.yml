@@ -1,4 +1,14 @@
+---
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/techno/public_html/admin
     - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp -R .env $DEPLOYPATH/.env
+    - cd $DEPLOYPATH
+    - /usr/local/bin/php artisan config:clear
+    - /usr/local/bin/php artisan cache:clear
+    - /usr/local/bin/php artisan view:clear
+    - /usr/local/bin/php artisan route:clear
+    - /usr/local/bin/php artisan storage:link
+    - /usr/local/bin/php artisan migrate --force
+    - /usr/local/bin/php artisan optimize
