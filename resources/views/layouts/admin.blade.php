@@ -75,7 +75,7 @@
         <div class="flex-1 flex flex-col overflow-hidden">
             <!-- Topbar -->
             <header class="bg-white shadow px-6 py-4 flex justify-between items-center">
-                <h1 class="text-xl font-semibold text-gray-700">Welcome, Admin</h1>
+                <h1 class="text-xl font-semibold text-gray-700">Welcome, Techno School</h1>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button type="submit" class="text-red-500 hover:text-red-700 font-medium">
